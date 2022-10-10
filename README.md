@@ -4,7 +4,7 @@ Problem: Subset Sum Problem
 
 Definicja
 
-*Definicja problemu polega na stwierdzeniu, że suma dowolnego podzbioru danego zestawu liczb dodatnich jest sumą docelową.
+`Definicja problemu polega na stwierdzeniu, że suma dowolnego podzbioru danego zestawu liczb dodatnich jest sumą docelową.`
 
 Przykład
 
