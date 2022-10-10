@@ -1,6 +1,6 @@
 Problem: Subset Sum Problem
 
-```Problem sum podzbiorów jest jednym z dobrze znanych problemów w teorii algorytmów i dobrym przykładem problemów NP-zupełnych.```
+`Problem sum podzbiorów jest jednym z dobrze znanych problemów w teorii algorytmów i dobrym przykładem problemów NP-zupełnych.`
 
 Definicja
 
