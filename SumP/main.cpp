@@ -1,35 +1,45 @@
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <iterator>
+#include <sstream>
+
 using namespace std;
 
-// Returns true if there is a subset
-// of set[] with sum equal to given sum
-bool isSubsetSum(int set[], int n, int sum)
+
+bool isSubsetSum(vector<int> set, int n, int sum)
 {
 
-    // Base Cases
     if (sum == 0)
         return true;
     if (n == 0)
         return false;
 
-    // If last element is greater than sum,
-    // then ignore it
+
     if (set[n - 1] > sum)
         return isSubsetSum(set, n - 1, sum);
 
-    /* else, check if sum can be obtained by any
-of the following:
-      (a) including the last element
-      (b) excluding the last element   */
+
     return isSubsetSum(set, n - 1, sum)
            || isSubsetSum(set, n - 1, sum - set[n - 1]);
 }
 
-// Driver code
 int main()
 {
-    int set[] = { 1, 2, 8, 10, 50, 100 };
-    int sum = 9;
+
+    ifstream inFile("input.txt");
+
+    if (inFile.fail()) {
+        cerr << "Could not find file" << endl;
+    }
+    vector<int> set;
+    int S;
+    while (inFile>>S) {
+        set.push_back(S);
+    }
+    inFile.close();
+
+    int sum = 5;
     int n = sizeof(set) / sizeof(set[0]);
     if (isSubsetSum(set, n, sum) == true)
         cout <<"Found a subset with given sum";
